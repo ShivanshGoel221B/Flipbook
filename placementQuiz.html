@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/795d42cca3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="side-bar">
+      <h1>Dashboard</h1>
+
+      <button class="dropdown-btn">
+        Quiz
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="subjectiveQuiz.html">Subjective Quiz</a>
+        <a href="#">Placement Quiz</a>
+      </div>
+      <button class="dropdown-btn">
+        Book
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="#">Your Books</a>
+        <a href="#">Your Collections</a>
+      </div>
+      <button class="dropdown-btn">
+        Assignment
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="#">Assignment 1</a>
+        <a href="#">Assignment 2</a>
+        <a href="#">Assignment 3</a>
+      </div>
+
+      <button class="dropdown-btn">
+        Tutorial
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="#">Tutorial 1</a>
+        <a href="#">Tutorial 2</a>
+        <a href="#">Tutorial 3</a>
+      </div>
+
+     
+     
+    </div>
+
+    <div class="panel">
+      <div class="upload">
+        <p class="uploaded">SAFEBOOK UPLOADED SUCCESSFULLY!</p>
+      </div>
+      <div class="btn">
+        <button class="upload-button">
+          Upload File
+          <i class="fa fa-upload" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="heading-row">
+        <div class="w-33 safebook">SAFEBOOK</div>
+        <div class="w-16 o-title">SUBJECT</div>
+        <div class="w-16 o-title">LAST MODIFIED</div>
+        <div class="w-8 o-title">DELETE</div>
+        <div class="w-8 o-title">UPDATE</div>
+        <div class="w-8 o-title">PRIVACY</div>
+        <div class="w-8 o-title">SHARE</div>
+      </div>
+
+      <div class="uploaded-files">
+        <div class="books-row">
+          <div class="w-33 flex-f-row">
+            <div class="pdf-icon"></div>
+            <div class="name-box flex-f-col">
+              <p class="file-name">Introduction to Machine Learning</p>
+              <div class="flex-f-row">
+                <i class="fa-solid fa-file"></i>
+                <i class="file-size">159 Pages</i>
+              </div>
+            </div>
+          </div>
+          <div class="w-16 flex-f-row subject-name">
+            <p>EMF Theory</p>
+          </div>
+          <div class="w-16 flex-f-row m-date">
+            <p>Aug 23,2022</p>
+          </div>
+          <div class="w-8 flex-f-row o-icons">
+            <i class="fa-solid fa-trash fa-xl icons"></i>
+          </div>
+          <div class="w-8 flex-f-row o-icons">
+            <i class="fa-solid fa-rotate fa-xl icons"></i>
+          </div>
+          <div class="w-8 flex-f-row o-icons">
+            <i class="fas fa-user-shield fa-xl icons"></i>
+          </div>
+          <div class="w-8 flex-f-row o-icons">
+            <i class="fas fa-share-alt fa-xl icons"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+        } else {
+          dropdownContent.style.display = "block";
+        }
+      });
+    }
+  </script>
+</html>
+
+<!-- 
+    <li>
+        <span class="material-icons-outlined md-48 md-light">&#xE88a;</span>
+    </li> 
+-->
